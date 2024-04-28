@@ -13,7 +13,17 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'neanias/everforest-nvim'
+  use {
+    "OurCodeBase/everforest-nvim",
+    config = function()
+    require("everforest").setup({
+      background = "hard",
+      ui_contrast = "low",
+      dim_inactive_windows = false,
+      better_performance = true,
+    })
+  end
+  }
   if packer_bootstrap then
     require('packer').sync()
   end
