@@ -13,9 +13,9 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  -- native package client.
+  -- Plugin for packer starter.
   use 'wbthomason/packer.nvim'
-  -- everforest color plugin.
+  -- Plugin for everforest colorscheme.
   use {
     "OurCodeBase/everforest-nvim",
     config = function()
@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
     })
   end
   }
-  -- lualine plugin for ui.
+  -- Plugin for lualine for ui.
   use {
     'nvim-lualine/lualine.nvim',
     config = function()
@@ -37,13 +37,19 @@ return require('packer').startup(function(use)
         icons_enabled = false
       },
       sections = {
-        -- lualine_a = {'mode','filename'},
         lualine_a = {'mode'},
-        -- lualine_b = {'filename'},
+        lualine_b = {'filename'},
         lualine_y = {'filetype'},
         lualine_z = {'location'}
       }
     })
+    end
+  }
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
     end
   }
   if packer_bootstrap then
