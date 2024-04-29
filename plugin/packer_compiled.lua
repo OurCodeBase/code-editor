@@ -75,10 +75,16 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["everforest-nvim"] = {
-    config = { "\27LJ\2\n‰\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\25dim_inactive_windows\1\16ui_contrast\blow\23better_performance\2\15background\thard\nsetup\15everforest\frequire\0" },
+    config = { "\27LJ\2\n‰\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\15background\thard\25dim_inactive_windows\1\16ui_contrast\blow\23better_performance\2\nsetup\15everforest\frequire\0" },
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/everforest-nvim",
     url = "https://github.com/OurCodeBase/everforest-nvim"
+  },
+  ["lualine.nvim"] = {
+    config = { "\27LJ\2\næ\1\0\0\5\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rfiletype\14lualine_b\1\2\0\0\rfilename\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\1\0\1\ntheme\tauto\nsetup\flualine\frequire\0" },
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -90,8 +96,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: everforest-nvim
 time([[Config for everforest-nvim]], true)
-try_loadstring("\27LJ\2\n‰\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\25dim_inactive_windows\1\16ui_contrast\blow\23better_performance\2\15background\thard\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
+try_loadstring("\27LJ\2\n‰\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\15background\thard\25dim_inactive_windows\1\16ui_contrast\blow\23better_performance\2\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
 time([[Config for everforest-nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\næ\1\0\0\5\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rfiletype\14lualine_b\1\2\0\0\rfilename\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\1\0\1\ntheme\tauto\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
