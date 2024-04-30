@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
     })
     end
   }
+  -- Plugin for auto pairs.
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",

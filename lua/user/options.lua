@@ -5,6 +5,9 @@ vim.opt.cursorline = true
 vim.opt.fileencoding = "utf-8"
 vim.opt.foldmethod = "indent"
 
+-- needed for 24-bit colors.
+vim.opt.termguicolors = true
+
 -- no need of any backup file.
 vim.opt.backup = false
 vim.opt.writebackup = false
