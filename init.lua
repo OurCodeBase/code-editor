@@ -18,9 +18,11 @@ require("lualine").setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'filename'},
+    lualine_c = {},
+    lualine_x = {},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
-  }
+  },
 }
 -- settings for options or sets.
 require("user.options")
