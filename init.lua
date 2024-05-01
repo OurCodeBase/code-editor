@@ -24,6 +24,22 @@ require("lualine").setup {
     lualine_z = {'location'}
   },
 }
+-- settings for wilder.nvim.
+local wilder = require("wilder")
+wilder.setup({
+  modes = {':', '/', '?'},
+  next_key = '<Down>',
+  previous_key = '<Up>',
+  accept_key = '<Tab>',
+  reject_key = '<Left>',
+})
+-- settings for wilder.nvim for rounded border.
+wilder.set_option('renderer', wilder.popupmenu_renderer(
+  wilder.popupmenu_border_theme({
+    highlighter = wilder.basic_highlighter(),
+    border = 'rounded',
+  })
+))
 -- settings for options or sets.
 require("user.options")
 -- settings for vscode key shortcuts.
