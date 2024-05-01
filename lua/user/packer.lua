@@ -16,41 +16,15 @@ return require('packer').startup(function(use)
   -- Plugin for packer starter.
   use 'wbthomason/packer.nvim'
   -- Plugin for everforest colorscheme.
-  use {
-    "OurCodeBase/everforest-nvim",
-    config = function()
-    require("everforest").setup({
-      background = "hard",
-      ui_contrast = "low",
-      dim_inactive_windows = false,
-      better_performance = true,
-    })
-  end
-  }
+  use 'OurCodeBase/everforest-nvim'
   -- Plugin for lualine for ui.
-  use {
-    'nvim-lualine/lualine.nvim',
-    config = function()
-    require("lualine").setup({
-      options = { 
-        theme = 'auto',
-        icons_enabled = false
-      },
-      sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'filename'},
-        lualine_y = {'filetype'},
-        lualine_z = {'location'}
-      }
-    })
-    end
-  }
+  use 'nvim-lualine/lualine.nvim'
   -- Plugin for auto pairs.
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     config = function()
-        require("nvim-autopairs").setup {}
+      require("nvim-autopairs").setup {}
     end
   }
   if packer_bootstrap then
