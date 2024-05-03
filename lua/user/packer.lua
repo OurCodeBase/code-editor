@@ -27,6 +27,19 @@ return require('packer').startup(function(use)
       require("nvim-autopairs").setup {}
     end
   }
+  -- Plugin for nvim-completion.
+  use 'hrsh7th/nvim-cmp'
+  -- Plugin for buffer completion.
+  use 'hrsh7th/cmp-buffer'
+  -- Plugin for path completion.
+  use 'hrsh7th/cmp-path'
+  -- Plugin for cmdline completion.
+  use 'hrsh7th/cmp-cmdline'
+  -- Plugin for snippets.
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  -- Plugin for snippet collection.
+  use 'OurCodeBase/friendly-snippets'
   if packer_bootstrap then
     require('packer').sync()
   end

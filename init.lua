@@ -28,3 +28,5 @@ require("lualine").setup {
 require("user.options")
 -- settings for vscode key shortcuts.
 require("user.keymaps")
+-- settings for auto completion.
+require("user.completion")
