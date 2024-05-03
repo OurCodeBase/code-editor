@@ -27,8 +27,6 @@ return require('packer').startup(function(use)
       require("nvim-autopairs").setup {}
     end
   }
-  -- Plugin for wilder.nvim.
-  use 'gelguy/wilder.nvim'
   if packer_bootstrap then
     require('packer').sync()
   end
