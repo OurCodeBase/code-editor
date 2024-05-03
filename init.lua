@@ -1,5 +1,5 @@
 -- settings for plugins and list plugins.
-require("user.packer")
+require("user.plugins")
 -- settings for everforest colors.
 require("everforest").setup {
   background = "hard",
