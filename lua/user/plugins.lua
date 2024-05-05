@@ -6,8 +6,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Plugin for packer starter.
-  'wbthomason/packer.nvim',
   -- Plugin for everforest colorscheme.
   'OurCodeBase/everforest-nvim',
   -- Plugin for lualine for ui.
@@ -20,13 +18,13 @@ require("lazy").setup({
     end
   },
   -- Plugin for nvim-completion.
-  'hrsh7th/nvim-cmp',
+  { 'hrsh7th/nvim-cmp', event = "InsertEnter" },
   -- Plugin for buffer completion.
   'hrsh7th/cmp-buffer',
   -- Plugin for path completion.
   'hrsh7th/cmp-path',
   -- Plugin for cmdline completion.
-  'hrsh7th/cmp-cmdline',
+  { 'hrsh7th/cmp-cmdline', event = 'VeryLazy' },
   -- Plugin for snippets.
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
