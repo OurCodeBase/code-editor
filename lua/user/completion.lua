@@ -1,4 +1,5 @@
 local cmp = require'cmp'
+local luasnip = require("luasnip")
 
 cmp.setup({
   snippet = {
@@ -11,11 +12,21 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    ['<A-Down>'] = cmp.mapping.scroll_docs(-4),
-    ['<A-Up>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-a>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    ['<M-Up>'] = cmp.mapping.scroll_docs(-4),
+    ['<M-Down>'] = cmp.mapping.scroll_docs(4),
+    ['<M-Space>'] = cmp.mapping.complete(),
+    ['<M-c>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(1) then luasnip.jump(1)
+      else fallback()
+      end
+    end, { "i", "s" }),
+    ["<M-Left>"] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then luasnip.jump(-1)
+      else fallback()
+      end
+    end, { "i", "s" }),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
@@ -50,4 +61,5 @@ cmp.setup.cmdline(':', {
   matching = { disallow_symbol_nonprefix_matching = true }
 })
 
+-- this loads friendly-snippets as lazy-load.
 require('luasnip.loaders.from_vscode').lazy_load()
