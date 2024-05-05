@@ -12,7 +12,7 @@ require("lazy").setup({
   'nvim-lualine/lualine.nvim',
   -- Plugin for auto pairs.
   {
-    "windwp/nvim-autopairs", event = "InsertEnter",
+    'windwp/nvim-autopairs', event = "InsertEnter",
     config = function()
       require("nvim-autopairs").setup {}
     end
@@ -20,14 +20,14 @@ require("lazy").setup({
   -- Plugin for nvim-completion.
   { 'hrsh7th/nvim-cmp', event = "InsertEnter" },
   -- Plugin for buffer completion.
-  'hrsh7th/cmp-buffer',
+  { 'hrsh7th/cmp-buffer', event = "InsertEnter" },
   -- Plugin for path completion.
-  'hrsh7th/cmp-path',
+  { 'hrsh7th/cmp-path', event = "InsertEnter" },
   -- Plugin for cmdline completion.
-  { 'hrsh7th/cmp-cmdline', event = 'VeryLazy' },
+  { 'hrsh7th/cmp-cmdline', event = "VeryLazy" },
   -- Plugin for snippets.
-  'L3MON4D3/LuaSnip',
-  'saadparwaiz1/cmp_luasnip',
+  { 'L3MON4D3/LuaSnip', event = "VeryLazy" },
+  { 'saadparwaiz1/cmp_luasnip', event = "VeryLazy" },
   -- Plugin for snippet collection.
   'OurCodeBase/friendly-snippets',
 })
