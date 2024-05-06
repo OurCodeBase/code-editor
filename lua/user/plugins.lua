@@ -6,29 +6,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Plugin for everforest colorscheme.
-  'OurCodeBase/everforest-nvim',
-  -- Plugin for lualine for ui.
-  'nvim-lualine/lualine.nvim',
-  -- Plugin for auto pairs.
-  {
-    'windwp/nvim-autopairs', event = "InsertEnter",
+  -- core plugins.
+  'OurCodeBase/everforest-nvim', -- everforest colors.
+  'nvim-lualine/lualine.nvim', -- lualine statusline.
+  { 'windwp/nvim-autopairs', event = "InsertEnter", -- autopairs.
     config = function()
       require("nvim-autopairs").setup {}
     end
   },
-  -- Plugin for nvim-completion.
-  { 'hrsh7th/nvim-cmp', event = "InsertEnter" },
-  -- Plugin for buffer completion.
-  { 'hrsh7th/cmp-buffer', event = "InsertEnter" },
-  -- Plugin for path completion.
-  { 'hrsh7th/cmp-path', event = "InsertEnter" },
-  -- Plugin for cmdline completion.
-  { 'hrsh7th/cmp-cmdline', event = "VeryLazy" },
-  -- Plugin for snippets.
-  { 'L3MON4D3/LuaSnip', event = "VeryLazy" },
-  { 'saadparwaiz1/cmp_luasnip', event = "VeryLazy" },
-  -- Plugin for snippet collection.
-  'OurCodeBase/friendly-snippets',
+  -- completion.
+  { 'hrsh7th/nvim-cmp', event = "InsertEnter" }, -- the completion engine.
+  { 'hrsh7th/cmp-buffer', event = "InsertEnter" }, -- buffer completion.
+  { 'hrsh7th/cmp-path', event = "InsertEnter" }, -- path completion.
+  { 'hrsh7th/cmp-cmdline', event = "VeryLazy" }, -- cmdline completion.
+  -- snippets.
+  { 'L3MON4D3/LuaSnip', event = "VeryLazy" }, -- snippet engine.
+  { 'saadparwaiz1/cmp_luasnip', event = "VeryLazy" }, -- snippet connector.
+  'OurCodeBase/friendly-snippets', -- snippet collection.
 })
 
