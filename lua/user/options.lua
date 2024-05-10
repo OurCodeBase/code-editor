@@ -21,3 +21,4 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.modifiable = true
