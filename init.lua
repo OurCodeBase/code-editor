@@ -1,32 +1,12 @@
--- settings for plugins and list plugins.
-require("user.plugins")
--- settings for everforest colors.
-require("everforest").setup {
-  background = "hard",
-  ui_contrast = "low",
-  dim_inactive_windows = false,
-  better_performance = true,
-}
--- activation of everforest colors.
-require("everforest").load()
--- settings for lualine statusline.
-require("lualine").setup {
-  options = {
-    theme = 'auto',
-    icons_enabled = false
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'filename'},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {'filetype'},
-    lualine_z = {'location'}
-  },
-}
 -- settings for options or sets.
 require("user.options")
 -- settings for vscode key shortcuts.
 require("user.keymaps")
+-- settings for plugins and list plugins.
+require("user.plugins")
+-- settings for colorscheme.
+require("user.colorscheme")
+-- settings for neovim statusline.
+require("user.statusline")
 -- settings for auto completion.
 require("user.completion")
