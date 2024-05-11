@@ -2,11 +2,10 @@
 require("user.options")
 -- settings for vscode key shortcuts.
 require("user.keymaps")
--- settings for plugins and list plugins.
-require("user.plugins")
--- settings for colorscheme.
-require("user.colorscheme")
--- settings for neovim statusline.
-require("user.statusline")
--- settings for auto completion.
-require("user.completion")
+-- check and use lazy if unavailable.
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({'git', 'clone', '--filter=blob:none', 'https://github.com/folke/lazy.nvim.git', '--branch=stable', lazypath})
+end
+vim.opt.rtp:prepend(lazypath)
+require("lazy").setup("plugins")
