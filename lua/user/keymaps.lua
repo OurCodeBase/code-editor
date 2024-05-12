@@ -12,6 +12,7 @@ end
 nmap("f","zc")
 nmap("<C-e>","<Esc>:NvimTreeFindFile<CR>")
 nmap("<C-q>","<Esc>:q!<CR>")
+nmap("<C-Q>","<Esc>:qall!<CR>")
 imap("<C-q>","<Esc>:wq<CR>i")
 imap("<C-s>","<Esc>:w<CR>i")
 imap("<C-d>","<Esc>:t.<CR>i")
@@ -21,3 +22,5 @@ imap("<C-Up>","<Esc>:m-2<CR>gi")
 imap("<C-Down>","<Esc>:m+<CR>gi")
 imap("<C-c>","<Esc>yyi")
 imap("<C-v>","<Esc>pi")
+
+vim.api.nvim_set_keymap('v', "<BS>", "d", { noremap = true, silent = true })
