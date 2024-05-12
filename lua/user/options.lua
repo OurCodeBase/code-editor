@@ -15,7 +15,7 @@ vim.opt.swapfile = false
 
 -- tabs and indents.
 vim.opt.tabstop = 2
--- vim.opt.showtabline = 2 -- quick file tabs on the top.
+vim.opt.showtabline = 2 -- quick file tabs on the top.
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
