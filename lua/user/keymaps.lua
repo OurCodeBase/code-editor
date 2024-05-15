@@ -21,6 +21,7 @@ imap("<C-r>","<Esc>:redo<CR>i")
 imap("<C-Up>","<Esc>:m-2<CR>gi")
 imap("<C-Down>","<Esc>:m+<CR>gi")
 imap("<C-c>","<Esc>yyi")
+imap("<C-x>","<Esc>ddi")
 imap("<C-v>","<Esc>pi")
 
 vim.api.nvim_set_keymap('v', "<BS>", "d", { noremap = true, silent = true })

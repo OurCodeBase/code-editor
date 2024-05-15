@@ -6,6 +6,7 @@ return {
     "hrsh7th/cmp-buffer", -- buffer completion
     "hrsh7th/cmp-path", -- path completion
     { "hrsh7th/cmp-cmdline", event = "CmdlineEnter" }, -- cmdline completion
+    "hrsh7th/cmp-nvim-lsp-signature-help", -- signature completion
     -- snippets
     "L3MON4D3/LuaSnip", -- snippet engine
     "saadparwaiz1/cmp_luasnip", -- snippet engine
@@ -45,9 +46,10 @@ return {
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-      }, {
         { name = 'buffer' },
-      })
+        { name = 'path' },
+        { name = 'nvim_lsp_signature_help' },
+      }),
     })
     
     cmp.setup.cmdline({ '/', '?' }, {
@@ -68,9 +70,8 @@ return {
         ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
       },
       sources = cmp.config.sources({
-        { name = 'path' }
-      }, {
-        { name = 'cmdline' }
+        { name = 'path' },
+        { name = 'cmdline' },
       }),
       matching = { disallow_symbol_nonprefix_matching = true }
     })

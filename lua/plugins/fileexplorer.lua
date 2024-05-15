@@ -1,5 +1,5 @@
 return {
-  "nvim-tree/nvim-tree.lua",
+  "OurCodeBase/nvim-tree.lua",
   cmd = "NvimTreeFindFile",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
@@ -17,6 +17,7 @@ return {
       vim.keymap.set('n', '<C-x>', api.fs.cut, opts('Cut File'))
       vim.keymap.set('n', '<C-c>', api.fs.copy.node, opts('Copy File'))
       vim.keymap.set('n', '<C-v>', api.fs.paste, opts('Paste File'))
+      vim.keymap.set('n', '<C-d>', api.fs.remove, opts('Delete File'))
       vim.keymap.set('n', '<C-o>', api.node.open.tab, opts('Open File'))
     end
     explorer.setup({
