@@ -10,9 +10,11 @@ end
 
 -- pre defined vscode key shortcuts.
 nmap("f","zc")
+nmap("<C-f>","zM")
+nmap("<C-j>","zR")
 nmap("<C-e>","<Esc>:NvimTreeFindFile<CR>")
 nmap("<C-q>","<Esc>:q!<CR>")
-nmap("<C-Q>","<Esc>:qall!<CR>")
+nmap("<M-q>","<Esc>:qall!<CR>")
 imap("<C-q>","<Esc>:wq<CR>i")
 imap("<C-s>","<Esc>:w<CR>i")
 imap("<C-d>","<Esc>:t.<CR>i")
