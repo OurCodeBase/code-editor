@@ -62,6 +62,7 @@ return {
       "html",
       "jsonls",
       "pyright",
+      "eslint",
     }
     mason.setup({
       ui = {
