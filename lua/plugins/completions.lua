@@ -19,7 +19,7 @@ return {
     cmp.setup({
       snippet = {
         expand = function(args)
-          require('luasnip').lsp_expand(args.body)
+          luasnip.lsp_expand(args.body)
         end,
       },
       window = {
@@ -76,6 +76,9 @@ return {
       matching = { disallow_symbol_nonprefix_matching = true }
     })
     
+    -- expand javascript react snippets for javascript.
+    luasnip.filetype_extend( "javascript", { "html" })
+    luasnip.filetype_extend( "javascript", { "javascriptreact" })
     -- this loads friendly-snippets as lazy-load.
     require('luasnip.loaders.from_vscode').lazy_load()
   end
