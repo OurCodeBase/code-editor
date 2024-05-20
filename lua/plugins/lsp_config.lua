@@ -14,19 +14,39 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     -- language server protocol configration --
     local keymap = vim.keymap -- for conciseness
-    -- lsp keybinds
-    vim.api.nvim_create_autocmd("LspAttach", {
-      group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-      callback = function(ev)
-        -- see :help vim.lsp.*
-        local opts = { buffer = ev.buf, silent = true }
-        -- see :help vim.lsp.buf
-        opts.desc = "Show LSP definitions"
-        keymap.set("n", "<CR>", vim.lsp.buf.definition, opts)
-        opts.desc = "Show documentation for what is under cursor"
-        keymap.set("n", "<CR>", vim.lsp.buf.hover, opts)
-      end,
-    })
+    local opts = { noremap = true, silent = true } -- keymaps opts
+    local on_attach = function(client, bufnr)
+      -- see :help vim.lsp.buf
+      opts.desc = "Show LSP definitions"
+      keymap.set("n", "<CR>", vim.lsp.buf.definition, opts)
+      opts.desc = "Show documentation for what is under cursor"
+      keymap.set("n", "<CR>", vim.lsp.buf.hover, opts)
+      -- Enable document highlights if the server supports it
+      if client.server_capabilities.documentHighlightProvider then
+        local group = vim.api.nvim_create_augroup("LSPDocumentHighlight", {})
+        vim.opt.updatetime = 2000 -- cursor hold delay time
+        -- we can link highlights to an existing group.
+        vim.api.nvim_set_hl(0, 'LspReferenceRead', {link = 'Search'})
+        vim.api.nvim_set_hl(0, 'LspReferenceText', {link = 'Search'})
+        vim.api.nvim_set_hl(0, 'LspReferenceWrite', {link = 'Search'})
+        -- this will highlight text when cursor hold.
+        vim.api.nvim_create_autocmd("CursorHold", {
+          group = group,
+          buffer = bufnr,
+          callback = function()
+            vim.lsp.buf.document_highlight()
+          end,
+        })
+        -- this will clear highlight when cursor moved.
+        vim.api.nvim_create_autocmd("CursorMoved", {
+          group = group,
+          buffer = bufnr,
+          callback = function()
+            vim.lsp.buf.clear_references()
+          end,
+        })
+      end
+    end
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = cmp_nvim_lsp.default_capabilities()
     -- vim diagnostic settings
@@ -51,6 +71,7 @@ return {
       function(server_name)
         lspconfig[server_name].setup({
           capabilities = capabilities,
+          on_attach = on_attach,
         })
       end,
     })
