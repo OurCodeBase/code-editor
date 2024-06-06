@@ -79,6 +79,8 @@ return {
     -- expand javascript react snippets for javascript.
     luasnip.filetype_extend( "javascript", { "html" })
     luasnip.filetype_extend( "javascript", { "javascriptreact" })
+    luasnip.filetype_extend( "html", { "javascript" })
+    luasnip.filetype_extend( "html", { "css" })
     -- this loads friendly-snippets as lazy-load.
     require('luasnip.loaders.from_vscode').lazy_load()
   end

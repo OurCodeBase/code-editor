@@ -10,6 +10,7 @@
   "code_runner.nvim": { "branch": "main", "commit": "d135c4178bf8980ca5fa4aa6e27ab9ee4373c875" },
   "everforest-nvim": { "branch": "main", "commit": "5e0e32a569fb464911342f0d421721cc1c94cf25" },
   "friendly-snippets": { "branch": "main", "commit": "d1446afecd54d95b1214c6f5a032ad815fbc74d1" },
+  "inc-rename.nvim": { "branch": "main", "commit": "7c6125b1ee476b56708a6518a37b2a3357f57bfc" },
   "indent-blankline.nvim": { "branch": "master", "commit": "ece00d5fb44d196680a81fd2761062d2fa44663b" },
   "lazy.nvim": { "branch": "main", "commit": "8f19915175395680808de529e4220da8dafc0759" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
