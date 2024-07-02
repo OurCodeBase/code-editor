@@ -4,6 +4,11 @@ return {
   cmd = "RunCode",
   config = function()
     require('code_runner').setup({
+      mode = "float",
+      float = {
+        border = "rounded",
+        shadow = true,
+      },
       focus = true,
       filetype = {
         java = {
@@ -11,6 +16,8 @@ return {
           "javac $fileName &&",
           "java $fileNameWithoutExt"
         },
+        sh = "bash",
+        go = "go run",
         python = "python3 -u",
         typescript = "deno run",
         javascript = "node",
