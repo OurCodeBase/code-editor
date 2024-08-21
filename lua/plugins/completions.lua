@@ -77,10 +77,13 @@ return {
     })
     
     -- expand javascript react snippets for javascript.
-    luasnip.filetype_extend( "javascript", { "html" })
-    luasnip.filetype_extend( "javascript", { "javascriptreact" })
-    luasnip.filetype_extend( "html", { "javascript" })
-    luasnip.filetype_extend( "html", { "css" })
+    luasnip.filetype_extend( "javascriptreact", { "html" })
+    luasnip.filetype_extend( "javascript", { "html", "javascriptreact" })
+    luasnip.filetype_extend( "html", { "css", "javascript" })
+    -- if file extension endswith ejs.
+    if vim.fn.fnamemodify(vim.fn.expand('%:t'), ':e') == 'ejs' then
+      luasnip.filetype_extend( "html", { "ejs" })
+    end
     -- this loads friendly-snippets as lazy-load.
     require('luasnip.loaders.from_vscode').lazy_load()
   end
