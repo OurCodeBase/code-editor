@@ -22,3 +22,10 @@ vim.opt.smartindent = true
 
 -- vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.modifiable = true
+
+-- extend html filetype support for ejs.
+vim.filetype.add({
+  extension = {
+    ejs = "html",
+  },
+})
