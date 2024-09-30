@@ -82,7 +82,6 @@ return {
       "cssls",
       "html",
       "jsonls",
-      "pyright",
       "eslint",
     }
     mason.setup({
