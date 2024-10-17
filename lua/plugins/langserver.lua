@@ -78,7 +78,7 @@ return {
     -- mason package manager --
     local servers = {
       "bashls",
-      "tsserver",
+      "ts_ls",
       "cssls",
       "html",
       "jsonls",
