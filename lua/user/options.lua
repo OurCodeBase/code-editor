@@ -4,6 +4,7 @@ vim.opt.mouse = "a"
 vim.opt.cursorline = true
 vim.opt.fileencoding = "utf-8"
 vim.opt.foldmethod = "indent"
+vim.opt.splitbelow = true
 
 -- needed for 24-bit colors.
 vim.opt.termguicolors = true
