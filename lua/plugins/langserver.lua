@@ -78,11 +78,10 @@ return {
     -- mason package manager --
     local servers = {
       "bashls",
-      "tsserver",
+      "ts_ls",
       "cssls",
       "html",
       "jsonls",
-      "pyright",
       "eslint",
     }
     mason.setup({
