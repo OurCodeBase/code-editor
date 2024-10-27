@@ -84,4 +84,4 @@ python example.py
 # Code Editor Modes
 
 Click here to know more about modes 
-[Code Editor Modes](get-started)
+[Code Editor Modes](README.md)
