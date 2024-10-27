@@ -13,7 +13,7 @@ Supports over 80+ modern languages and almost all popular frameworks.
 <h2 style = "color:#d96914;">For Intalling, Updating and Reseting Code Editor</h2>
 
 You can use Guide for Detailed steps and links of Code Editor
-[ Guide of Code Editor](languages)
+[ Guide of Code Editor](languages.md)
 
 ## Modes in Code Editor 
 There are 3 Modes in Code Editor :- 
