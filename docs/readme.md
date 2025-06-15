@@ -5,7 +5,6 @@
 
 </div>
 
-## Overview
 - 🎉 Supports auto-completions on over 80+ modern languages and almost all popular frameworks.
 - ⚡ A lightning-fast and highly efficient ide, offering a seamless coding experience without compromising on performance.️
 - ⚔ Cross platform supported so you can code on any platform.
@@ -24,11 +23,11 @@ You have to make sure that you already have, atleast basic knowledge of terminal
 To access code-editor you can see the documentation here for now. [Click Here!](https://github.com/My-CodeDefense/code-editor)
 
 And if you are an experienced linux user just use these commands.
-```sh
-git clone https://github.com/OurCodeBase/code-editor .code-editor
+```bash
+git clone https://github.com/OurCodeBase/code-editor ~/.code-editor
 ```
 
-```sh
+```bash
 ln -sf ~/.code-editor/src ~/.config/nvim
 ```
 
