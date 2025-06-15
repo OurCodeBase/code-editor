@@ -17,6 +17,16 @@ A modern, modular, and extensible code editor equipped with IDE-like features fo
 ## Documentation
 
 To access code-editor you can see the documentation here for now. [Click Here!](https://github.com/My-CodeDefense/code-editor)
+
+And if you are a experienced linux user just use these commands.
+```sh
+git clone https://github.com/OurCodeBase/code-editor .code-editor
+```
+
+```sh
+ln -sf ~/.code-editor/src ~/.config/nvim
+```
+
 ## Contributing
 
 Contributions are always welcome!
