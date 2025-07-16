@@ -28,32 +28,32 @@ code-editor is based on `neovim` and it's language server protocol is installed 
 
 ### Install dependencies
 
-If your device is non-rooted then use `sudo` infront of every command mentioned below. *`eg: apt install git nodejs neovim -y`*
+If your shell is non-rooted then use `sudo` infront of every command mentioned below.
 
-|     **Platform**     | **Supported Package** | **Rooted** |         **Command**         |
-|:--------------------:|:---------------------:|:----------:|:---------------------------:|
-| Debian Based, Termux | deb                   |      ✅     | `apt install git nodejs neovim -y` |
-| RHEL Based           | rpm                   |      ✅     | `dnf install git nodejs neovim -y` |
-| Arch Based           | pkg.tar.zst           |      ✅     | `pacman -S git nodejs neovim -y`   |
+|     **Platform**     | **Supported Package** |         **Command**         |
+|:--------------------:|:---------------------:|:---------------------------:|
+| Debian Based         | deb                   | `apt install nodejs neovim` |
+| RHEL Based           | rpm                   | `dnf install nodejs neovim` |
+| Arch Based           | pkg.tar.zst           | `pacman -S nodejs neovim`   |
 
-### Check dependencies
+### Check dependencies (Optional)
 
-Check that these packages are successfully installed or not using the following commands.
+<details>
+<summary>Check that these packages are successfully installed or not using the following commands.</summary>
+<br>
 
-| **Packages** | **Command** | **Expected Results** |
-|:------------:|:-----------:|:--------------------:|
-| nodejs       | `node -v`   | v22.8.0              |
-| npm          | `npm -v`    | 10.8.2               |
+| **Package** | **Command** | **Expected Output** |
+|:-----------:|:-----------:|:-------------------:|
+| nodejs      | `node -v`   | v22.8.0             |
+| npm         | `npm -v`    | 10.8.2              |
+
+</details>
 
 ### Finishing Up
 
-Clone the entire repository.
+Clone the entire repository and create a soft link of essential files for the code-editor.
 ```bash
 git clone --depth=1 https://github.com/OurCodeBase/code-editor ~/.code-editor
-```
-
-Create a soft link of essential files for the code-editor.
-```bash
 ln -sf ~/.code-editor/src ~/.config/nvim
 ```
 
