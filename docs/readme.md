@@ -45,8 +45,9 @@ If your shell is non-rooted then use `sudo` infront of every command mentioned b
 
 All the commands related to above points are added below. Just copy, paste and enter these.
 ```bash
-yes | (apt update && apt upgrade && apt install wget) && bash -c "$(wget https://raw.githubusercontent.com/OurCodeBase/TermUi/main/assets/easyboot.sh -O -)"
-mv -f SpaceMonoNerdFont-Bold.ttf ~/.termux/font.ttf
+yes | (apt update && apt upgrade && apt install wget) && bash -c "$(wget https://raw.githubusercontent.com/OurCodeBase/TermUi/main/assets/easyboot.sh -O -)" && \
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SpaceMono/Bold/SpaceMonoNerdFont-Bold.ttf && \
+mv -f SpaceMonoNerdFont-Bold.ttf ~/.termux/font.ttf && \
 apt install nodejs neovim
 ```
 
