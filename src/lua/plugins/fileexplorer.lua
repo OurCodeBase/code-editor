@@ -9,16 +9,16 @@ return {
       local function opts(desc)
         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
       end
-      vim.keymap.set('n', '<CR>', api.node.open.tab, opts('New Tab'))
+      vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Buffer Open'))
       vim.keymap.set('n', '<Right>', api.node.open.edit, opts('Open Folder'))
       vim.keymap.set('n', '<Left>', api.node.navigate.parent_close, opts('Close Folder'))
-      vim.keymap.set('n', 'q', api.tree.close, opts('Close Folder'))
+      vim.keymap.set('n', 'q', api.tree.close, opts('Quit Explorer'))
       vim.keymap.set('n', '<C-n>', api.fs.create, opts('Create File'))
       vim.keymap.set('n', '<C-x>', api.fs.cut, opts('Cut File'))
       vim.keymap.set('n', '<C-c>', api.fs.copy.node, opts('Copy File'))
       vim.keymap.set('n', '<C-v>', api.fs.paste, opts('Paste File'))
       vim.keymap.set('n', '<C-d>', api.fs.remove, opts('Delete File'))
-      vim.keymap.set('n', '<C-o>', api.node.open.tab, opts('Open File'))
+      vim.keymap.set('n', 'p', api.node.open.preview, opts('Preview File'))
     end
     explorer.setup({
       on_attach = explorer_attach,

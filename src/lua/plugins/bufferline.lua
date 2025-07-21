@@ -1,6 +1,6 @@
 return {
   "akinsho/bufferline.nvim",
-  event = "TabNewEntered",
+  event = "BufAdd",
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
     require("bufferline").setup{}
